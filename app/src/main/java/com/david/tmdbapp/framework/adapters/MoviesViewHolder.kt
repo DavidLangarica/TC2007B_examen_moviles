@@ -12,8 +12,11 @@ class MoviesViewHolder(private val binding: ItemMovieBinding) :
 
     fun bind(item: Movie, context: Context) {
         val movieTitle = item.title
+        val movieOverview = item.overview
+        val movieOverviewShort = movieOverview.substring(0, 100) + "..."
         val movieImageSrc = "${Constants.IMAGE_BASE_URL}${item.poster_path}"
-        binding.TVName.text = movieTitle
+        binding.movieName.text = movieTitle
+        binding.movieOverview.text = movieOverviewShort
 
         Glide.with(context).load(movieImageSrc).into(binding.moviePhoto)
     }

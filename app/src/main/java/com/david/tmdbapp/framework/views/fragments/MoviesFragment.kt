@@ -63,7 +63,7 @@ class MoviesFragment : Fragment() {
         recyclerView.setHasFixedSize(true)
         val dataSize = dataForList.size
         val gridLayoutManager =
-            GridLayoutManager(requireContext(), 1, GridLayoutManager.VERTICAL, false)
+            GridLayoutManager(requireContext(), 2, GridLayoutManager.VERTICAL, false)
         recyclerView.layoutManager = gridLayoutManager
         if (dataSize > 0) {
             showMovies()

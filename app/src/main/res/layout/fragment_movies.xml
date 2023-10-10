@@ -7,10 +7,41 @@
     android:orientation="vertical"
     tools:context=".framework.views.activities.MainActivity">
 
-    <TextView
+    <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Las películas" />
+        android:layout_gravity="center"
+        android:layout_marginVertical="20dp"
+        android:backgroundTint="@color/purple_200"
+        app:cardCornerRadius="100dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/baseline_movie_24"
+            app:tint="@color/purple_700" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:text="Top Movies October 2023"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
+        android:paddingHorizontal="20dp"
+        android:text="Discover this month's most popular films in one place. My recommendation is that you grab some popcorn and enjoy"
+        android:textAlignment="center" />
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -25,10 +56,8 @@
         <RelativeLayout
             android:id="@+id/relativeLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:paddingHorizontal="20dp"
-            android:paddingTop="20dp"
-            android:paddingBottom="80dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
