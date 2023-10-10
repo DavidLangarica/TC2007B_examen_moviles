@@ -1,8 +1,8 @@
 package com.david.tmdbapp.domain.model
 
-import com.google.gson.annotations.SerializedName
-
 data class tmdbObject(
-    @SerializedName("count") val count: Int,
-    @SerializedName("results") val results: ArrayList<tmdb>,
+    val page: Int,
+    val results: List<Movie>,
+    val total_pages: Int,
+    val total_results: Int
 )
