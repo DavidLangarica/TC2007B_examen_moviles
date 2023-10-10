@@ -1,1 +1,3 @@
-# TC2007B_examen_moviles
+# TC2007B Examen Android
+
+David René Langarica Hernández | A01708936
