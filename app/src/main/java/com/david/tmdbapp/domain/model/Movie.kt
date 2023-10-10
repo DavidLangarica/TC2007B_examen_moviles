@@ -1,6 +1,6 @@
 package com.david.tmdbapp.domain.model
 
-data class Result(
+data class Movie(
     val adult: Boolean,
     val backdrop_path: String,
     val genre_ids: List<Int>,
