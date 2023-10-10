@@ -1,5 +1,8 @@
 package com.david.tmdbapp.domain.model
 
+/*
+ * Data class that represents the data retrieved for each of the movies
+ */
 data class Movie(
     val adult: Boolean,
     val backdrop_path: String,
