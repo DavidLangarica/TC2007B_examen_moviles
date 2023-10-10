@@ -1,6 +1,5 @@
 package com.david.tmdbapp.framework.viewmodels
 
-import android.content.Context
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -11,11 +10,18 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
+/*
+ * Class that defines the ViewModel for the MoviesFragment
+ */
 class MoviesViewModel() : ViewModel() {
     val moviesObjectLiveData = MutableLiveData<tmdbObject?>()
     private val moviesListRequirement = MoviesListRequirement()
 
-
+    /*
+     * Function that makes the request to the API
+     *
+     * @param apiKey: String
+     */
     fun getMoviesList(apiKey: String) {
         viewModelScope.launch(Dispatchers.IO) {
             val result: tmdbObject? = moviesListRequirement(apiKey)
